@@ -15,7 +15,7 @@
     <%=f.text_field :price, class: "form-control"%>
   </div>
 
- <div class="form-group">
+  <div class="form-group">
     <label for="laptop_published">Published</label> 
     </br>
     <%if @laptop.published%>
@@ -25,6 +25,26 @@
       <input type="radio" value="true" name="laptop[published]" id="laptop_published">True
       <input type="radio" value="false" name="laptop[published]" id="laptop_published" checked="checked">False
     <%end%> 
+  </div>
+
+  <div class="form-group">
+    <%=f.label :category_id%>
+    <%=f.text_field :category_id, class: "form-control"%>
+  </div>
+
+  <div class="form-group">
+    <label for="laptop_category">Category</label>
+    <select class="form-control" type="text" value="true" name="laptop[category_id]" id="laptop_category_id">
+      <%@categories.each do |category|%>
+        <option value="<%=category.id%>"
+          <%if category.id == @laptop.category_id%>
+            selected
+          <%end%>
+          >
+          <%=category.title%>          
+        </option>
+      <%end%>
+    </select> 
   </div>
 
   <div class="actions">

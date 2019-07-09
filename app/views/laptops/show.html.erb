@@ -18,6 +18,10 @@
   <strong>Published:</strong>
   <%=@laptop.published%>
 </p>
-<div>
+
+<p>
+  <strong>Category_id:</strong>
+  <%=@laptop.category_id%>
+</p>
 <%=link_to "Edit", edit_laptop_path(@laptop)%> |
 <%=link_to "Back", laptops_path%> 

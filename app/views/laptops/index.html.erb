@@ -2,7 +2,8 @@
 <table class="table">
   <thead>
     <tr>
-      <th> Title </th>
+      <th>Category id</th>
+      <th>Title</th>
       <th colspan="4"> Price </th>
     </tr>
   </thead>
@@ -10,6 +11,7 @@
   <tbody>
     <%@laptops.each do |laptop|%>
       <tr>
+        <td><%=laptop.category_id%></td>
         <td><%=laptop.title%></td>
         <td><%=laptop.price%></td>
         <td><%=link_to "Show", laptop%></td>

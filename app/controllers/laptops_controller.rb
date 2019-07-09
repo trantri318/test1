@@ -10,7 +10,7 @@ class LaptopsController < ApplicationController
   end
 
   def edit
-    
+   @categories = Category.all
   end
 
   def update
@@ -46,7 +46,7 @@ class LaptopsController < ApplicationController
   end
 
   def laptop_params
-    params.require(:laptop).permit(:title, :description, :price, :published)
+    params.require(:laptop).permit(:title, :description, :price, :published, :category_id)
   end
 
 end 
