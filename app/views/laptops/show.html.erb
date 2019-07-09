@@ -1,0 +1,23 @@
+<h1>Details Laptop</h1>
+  <p>
+    <strong>Title:</strong>
+    <%=@laptop.title%>
+  </p>
+
+  <p>
+    <strong>Description:</strong>
+    <%=@laptop.description%>
+  </p>
+
+  <p>
+    <strong>Price:</strong>
+    <%=@laptop.price%>
+  </p>
+
+  <p>
+    <strong>Published:</strong>
+    <%=@laptop.published%>
+  </p>
+  <div>
+ <%=link_to "Edit", edit_laptop_path(@laptop)%> |
+ <%=link_to "Back", laptops_path%> 
