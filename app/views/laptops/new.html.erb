@@ -1,28 +1,28 @@
 <h1>New Laptop</h1>
-  <%=form_for @laptop do |f|%>
-    <div class="form-group">
-      <%=f.label :title%>
-      <%=f.text_field :title, class: "form-control"%>
-    </div> 
+<%=form_for @laptop do |f|%>
+  <div class="form-group">
+    <%=f.label :title%>
+    <%=f.text_field :title, class: "form-control"%>
+  </div> 
 
-    <div class="form-group">
-      <%=f.label :description%>
-      <%=f.text_area :description, class: "form-control"%>
-    </div>
+  <div class="form-group">
+    <%=f.label :description%>
+    <%=f.text_area :description, class: "form-control"%>
+  </div>
 
-    <div class="form-group">
-      <%=f.label :price%>
-      <%=f.text_field :price, class: "form-control"%>
-    </div>
+  <div class="form-group">
+    <%=f.label :price%>
+    <%=f.text_field :price, class: "form-control"%>
+  </div>
 
-    <div class="form-group">
-      <label for="laptop_published">Published</label>
-      <%=@laptop.published%>
-        <input value="true" type="radio" name="laptop[published]" id="laptop_published">True
-        <input value="false" type="radio" name="laptop[published]" id="laptop_published">False
-    </div>
+  <div class="form-group">
+    <label for="laptop_published">Published</label>
+    <%=@laptop.published%>
+      <input value="true" type="radio" name="laptop[published]" id="laptop_published">True
+      <input value="false" type="radio" name="laptop[published]" id="laptop_published">False
+  </div>
 
-    <div class="actions">
-      <%=f.submit "Create", class: "btn btn-primary"%>
-    </div>
-  <%end%>
+  <div class="actions">
+    <%=f.submit "Create", class: "btn btn-primary"%>
+  </div>
+<%end%>

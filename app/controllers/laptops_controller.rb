@@ -1,5 +1,6 @@
 class LaptopsController < ApplicationController
     before_action :set_laptop, only: [:show, :edit, :update, :destroy]
+
   def index
     @laptops = Laptop.all
   end
@@ -16,8 +17,13 @@ class LaptopsController < ApplicationController
     if @laptop.update(laptop_params)
       redirect_to laptops_url
     else
-      redirect_to edit_laptop_url(@laptop.id)
+      redirect_to edit_laptop_url
     end
+  end
+
+  def destroy
+    @laptop.destroy
+    redirect_to laptops_url
   end
 
   def new
@@ -30,9 +36,9 @@ class LaptopsController < ApplicationController
       redirect_to laptops_url
     else
       redirect_to new_laptop_url
-    end 
-      
+    end   
   end
+
     private
     
   def set_laptop

@@ -1,22 +1,22 @@
 <h1>Laptops List</h1>
-  <table class="table">
-    <thead>
-      <tr>
+<table class="table">
+  <thead>
+    <tr>
       <th> Title </th>
       <th colspan="4"> Price </th>
-      </tr>
-    </thead>
+    </tr>
+  </thead>
 
-    <tbody>
-      <%@laptops.each do |laptop|%>
-        <tr>
-          <td><%=laptop.title%></td>
-          <td><%=laptop.price%></td>
-          <td><%=link_to "Show", laptop%></td>
-          <td><%=link_to "Edit", edit_laptop_path(laptop)%></td>
-          <td><%=link_to "Destroy", laptop, method: :delete, data:{ confirm: "Are you sure?" }%></td>
-        </tr> 
-      <%end%> 
-    </tbody>
-  </table>
+  <tbody>
+    <%@laptops.each do |laptop|%>
+      <tr>
+        <td><%=laptop.title%></td>
+        <td><%=laptop.price%></td>
+        <td><%=link_to "Show", laptop%></td>
+        <td><%=link_to "Edit", edit_laptop_path(laptop)%></td>
+        <td><%=link_to "Destroy", laptop, method: :delete, data:{ confirm: "Are you sure?" }%></td>
+      </tr> 
+    <%end%> 
+  </tbody>
+</table>
 <%=link_to "New Laptop", new_laptop_path%>
